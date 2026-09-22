@@ -112,7 +112,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-  width: min(100%, 900px);
+  width: min(100%, 700px);
   margin: 24px auto 0;
   padding: 12px;
   background: #000000;
@@ -125,7 +125,7 @@ h3 {
   min-width: 0;
 }
 
-@media (max-width: 720px) {
+@media (max-width:720px) {
   .photo-stack {
     grid-template-columns: 1fr;
   }
