@@ -64,12 +64,9 @@ function villainScare() {
 }// AI-assisted ghoul chase interaction
 
 const ghoul = document.querySelector("#ghoul");
+let ghoulChaseTimer;
 
 scareArea.addEventListener("click", startGhoulChase);
-
-function startGhoulChase() {
-
-   let ghoulChaseTimer;
 
 function startGhoulChase() {
     clearTimeout(ghoulChaseTimer);
@@ -81,3 +78,4 @@ function startGhoulChase() {
     ghoulChaseTimer = setTimeout(function () {
         ghoul.classList.add("ghoul-chase");
     }, 500);
+}
