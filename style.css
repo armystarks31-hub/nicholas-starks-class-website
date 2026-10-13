@@ -1,3 +1,4 @@
+
 :root {
   --background: #111111;
   --text: #ffffff;
@@ -6,7 +7,6 @@
   --line: #869397;
   --card-background: #25292b;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -342,4 +342,22 @@ li {
         left: 110vw;
         opacity: 1;
     }
+}#site-footer a {
+  display: inline-block;
+  margin: 8px 12px;
+  color: var(--accent);
+}
+
+#site-footer a:hover {
+  color: var(--text);
+}
+
+.hero > *,
+.favorites > * {
+  min-width: 0;
+}
+
+.site-nav a,
+.favorite-card {
+  overflow-wrap: break-word;
 }

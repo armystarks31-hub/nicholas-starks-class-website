@@ -23,8 +23,8 @@ const scareArea = document.querySelector("#scare-area");
 const gangScared = document.querySelector("#gang-scared");
 const scoobyScared = document.querySelector("#scooby-scared");
 
-scareArea.addEventListener("mouseover", scareGang);
-scareArea.addEventListener("mouseout", resetGang);
+scareArea.addEventListener("mouseenter", scareGang);
+scareArea.addEventListener("mouseleave", resetGang);
 
 function scareGang() {
     gangScared.style.display = "none";
@@ -69,14 +69,15 @@ scareArea.addEventListener("click", startGhoulChase);
 
 function startGhoulChase() {
 
-    // Remove the class so the chase can be replayed
-    ghoul.classList.remove("ghoul-chase");
+   let ghoulChaseTimer;
 
-    // Restart the animation
+function startGhoulChase() {
+    clearTimeout(ghoulChaseTimer);
+
+    ghoul.classList.remove("ghoul-chase");
     void ghoul.offsetWidth;
 
-    // Give Scooby a small head start
-    setTimeout(function () {
+    // Give the gang a half-second head start.
+    ghoulChaseTimer = setTimeout(function () {
         ghoul.classList.add("ghoul-chase");
     }, 500);
-}
